@@ -23,3 +23,20 @@ const realizarMatricula = (cpf, status) => {
     }
 }
 
+//Reducer para controle do historico do vestibular
+const historicoVestibular = (historicoVestibularAtual = [], acao) => {
+    if(acao.type === "REALIZAR_VESTIBULAR"){
+        return [...historicoVestibularAtual, acao.payload]
+    }
+
+    return historicoVestibularAtual
+}
+
+//Reducer para controle do historico de matricula
+const historicoMatricula = (historicoMatriculaAtual = [], acao) => {
+    if(acao.type === "REALIZAR_MATRICULA"){
+        return [...historicoMatriculaAtual, acao.payload]
+    }
+
+    return historicoMatriculaAtual
+}
